@@ -150,4 +150,14 @@ router.post("/request",authMiddleware,async(req,res)=>{
     }
 });
 
+router.get("/request",authMiddleware,async(req,res)=>{
+    const account = await Account.findOne({
+        userId: req.userId,
+    })
+
+    res.json({
+        moneyRequest: account.moneyRequests,
+    })
+})
+
 module.exports = router;

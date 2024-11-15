@@ -62,10 +62,17 @@ function User({user}){
                 </div>
             </div>
         </div>
-        <div className="flex flex-col justify-center h-ful" >
-            <Button onClick={e=>{
-                navigate("/send?id=" + user._id + "&name=" + user.firstName); 
-            }} label={"Send Money"}/>
+        <div className="flex justify-center space-x-4">
+            <div className="flex flex-col justify-center h-ful" >
+                <Button onClick={e=>{
+                    navigate("/request?id=" + user._id + "&name=" + user.firstName); 
+                }} label={"Request Money"}/>
+            </div>
+            <div className="flex flex-col justify-center h-ful" >
+                <Button onClick={e=>{
+                    navigate("/send?id=" + user._id + "&name=" + user.firstName); 
+                }} label={"Send Money"}/>
+            </div>
         </div>
     </div>
 }
