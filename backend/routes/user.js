@@ -2,8 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 
-const jwt = require("jsonwebtoken")
-const {JWT_SECRET} = require("../config")
+const jwt = require("jsonwebtoken");
+require('dotenv').config();
+const JWT_SECRET = process.env.JWT_SECRET;
 const zod = require("zod");
 const {User, Account} = require("../db")
 const {authMiddleware} = require("../middleware")

@@ -2,6 +2,7 @@ import {useSearchParams} from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
+import { SuccessAnimation } from "../components/SuccessAnimation";
 
 export const SendMoney = () => {
     const [searchParams]=useSearchParams();
@@ -28,7 +29,7 @@ export const SendMoney = () => {
                     setShowSuccess(false);
                     navigate("/dashboard");
 
-                },1500);
+                },5000);
         }
         catch(err){
             console.log("transfer failed: ",err);
@@ -39,12 +40,7 @@ export const SendMoney = () => {
         <div className="h-full flex flex-col justify-center">
             <div class="border h-min text-card-foreground max-w-md p-4 space-y-8 w-96 bg-white shadow-lg rounded-lg">
             {showSuccess ? (
-            <div className="flex flex-col items-center p-6 animate-fade-in">
-                <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="text-3xl text-white">✔</span>
-                </div>
-                <h2 className="text-2xl font-bold text-green-500 mt-4">Transfer Successful!</h2>
-            </div>
+            <SuccessAnimation/>
             ):(
                 <>
                 <div class="flex flex-col space-y-1.5 p-6">
