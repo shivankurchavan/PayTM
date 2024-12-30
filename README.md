@@ -45,7 +45,12 @@ A full-stack payments app with user authentication and money transfer capabiliti
    npm install
    npm run dev
    ```
-
+## Screenshots
+![Dashboard](Screenshot_2024-11-15_04-38-21.png)
+![Request money page](Screenshot_2024-11-15_04-38-50.png)
+![Request money animation page](Screenshot_2024-11-15_04-41-03.png)
+![Signup page](Screenshot_2024-11-15_04-41-20.png)
+![Signin page](Screenshot_2024-11-15_04-41-31.png)
 
 ## License
 This project is licensed under the MIT License.
